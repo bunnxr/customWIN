@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
-	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=en-US&Locale=en-US&Keyboard=00000409&GeoLocation=244&ProcessorArchitecture=amd64&BypassRequirementsCheck=true&ComputerNameMode=Script&ComputerNameScript=return+Read-Host+-Prompt+%27Enter+computer+name%27%3B&CompactOsMode=Default&TimeZoneMode=Implicit&PartitionMode=Interactive&WindowsEditionMode=Generic&WindowsEdition=pro&UserAccountMode=Interactive&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=Hidden&LaunchToThisPC=true&TaskbarSearch=Hide&TaskbarIconsMode=Empty&DisableWidgets=true&HideTaskViewButton=true&DisableBingResults=true&StartTilesMode=Empty&StartPinsMode=Empty&DisableDefender=true&DisableUac=true&DisableSystemRestore=true&AllowPowerShellScripts=true&DisableLastAccess=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&DisablePointerPrecision=true&DeleteWindowsOld=true&WifiMode=Interactive&ExpressSettings=DisableAll&KeysMode=Skip&ColorMode=Custom&SystemColorTheme=Dark&AppsColorTheme=Dark&AccentColor=%230078d4&EnableTransparency=true&WallpaperMode=Default&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveHandwriting=true&RemoveInternetExplorer=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveMixedReality=true&RemoveZuneVideo=true&RemoveNews=true&RemoveOffice365=true&RemoveOneDrive=true&RemoveOneNote=true&RemoveOneSync=true&RemoveOpenSSHClient=true&RemoveOutlook=true&RemovePaint3D=true&RemovePeople=true&RemovePowerAutomate=true&RemovePowerShellISE=true&RemoveQuickAssist=true&RemoveRecall=true&RemoveRdpClient=true&RemoveSkype=true&RemoveSolitaire=true&RemoveSpeech=true&RemoveStepsRecorder=true&RemoveStickyNotes=true&RemoveTeams=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWallet=true&RemoveWeather=true&RemoveFaxAndScan=true&RemoveWindowsMediaPlayer=true&RemoveWordPad=true&RemoveXboxApps=true&RemoveYourPhone=true&SystemScript0=powercfg.exe+%2Fhibernate+off%0D%0A&SystemScriptType0=Cmd&SystemScript1=Windows+Registry+Editor+Version+5.00%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CAdvanced%5D%0D%0A%22MultiTaskingAltTabFilter%22%3Ddword%3A00000003%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CControl+Panel%5CDesktop%5D%0D%0A%22PaintDesktopVersion%22%3Ddword%3A00000001%0D%0A%22JPEGImportQuality%22%3Ddword%3A00000099%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDesktopBackground%5CShell%5CKillNotResponding%5D%0D%0A%22MUIVerb%22%3D%22Kill+not+responding+tasks%22%0D%0A%22Icon%22%3D%22%25SystemRoot%25%5C%5C%5C%5CSystem32%5C%5C%5C%5Cimageres.dll%2C-98%22%0D%0A%22Position%22%3D%22Top%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDesktopBackground%5CShell%5CKillNotResponding%5CCommand%5D%0D%0A%40%3D%22cmd.exe+%2FK+taskkill.exe+%2FF+%2FFI+%5C%22status+eq+NOT+RESPONDING%5C%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5C*%5Cshell%5CTakeOwnership%5D%0D%0A%40%3D%22Take+Ownership%22%0D%0A%22HasLUAShield%22%3D%22%22%0D%0A%22NoWorkingDirectory%22%3D%22%22%0D%0A%22NeverDefault%22%3D%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5C*%5Cshell%5CTakeOwnership%5Ccommand%5D%0D%0A%40%3D%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%22IsolatedCommand%22%3D+%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDirectory%5Cshell%5CTakeOwnership%5D%0D%0A%40%3D%22Take+Ownership%22%0D%0A%22HasLUAShield%22%3D%22%22%0D%0A%22NoWorkingDirectory%22%3D%22%22%0D%0A%22NeverDefault%22%3D%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDirectory%5Cshell%5CTakeOwnership%5Ccommand%5D%0D%0A%40%3D%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fr+%2Fd+y+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%2Fq+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%22IsolatedCommand%22%3D%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fr+%2Fd+y+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%2Fq+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%0D%0A%3B+Desktop%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7BB4BFCC3A-DB2C-424C-B029-7FE99A87C641%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7BB4BFCC3A-DB2C-424C-B029-7FE99A87C641%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Documents%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bd3162b92-9365-467a-956b-92703aca08af%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bd3162b92-9365-467a-956b-92703aca08af%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Downloads%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B088e3905-0323-4b02-9826-5d99428e115f%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B088e3905-0323-4b02-9826-5d99428e115f%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Music%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B3dfdf296-dbec-4fb4-81d1-6a3438bcf4de%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B1CF1260C-4DD0-4ebb-811F-33C572699FDE%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B3dfdf296-dbec-4fb4-81d1-6a3438bcf4de%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Pictures%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B24ad3ad4-a569-4530-98e1-ab02f9417aa8%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B24ad3ad4-a569-4530-98e1-ab02f9417aa8%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Videos%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bf86fa3ab-70d2-4fc7-9c99-fcbf05467f3a%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bf86fa3ab-70d2-4fc7-9c99-fcbf05467f3a%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A&SystemScriptType1=Reg&FirstLogonScript0=Windows+Registry+Editor+Version+5.00%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CAdvanced%5D%0D%0A%22MultiTaskingAltTabFilter%22%3Ddword%3A00000003%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CControl+Panel%5CDesktop%5D%0D%0A%22PaintDesktopVersion%22%3Ddword%3A00000001%0D%0A%22JPEGImportQuality%22%3Ddword%3A00000099&FirstLogonScriptType0=Reg&RestartExplorer=true&WdacMode=Skip&NotFilename=true-->
+	<!--https://schneegans.de/windows/unattend-generator/?LanguageMode=Unattended&UILanguage=en-US&Locale=en-US&Keyboard=00000409&GeoLocation=244&ProcessorArchitecture=amd64&BypassRequirementsCheck=true&ComputerNameMode=Script&ComputerNameScript=return+Read-Host+-Prompt+%27Enter+computer+name%27%3B&CompactOsMode=Default&TimeZoneMode=Implicit&PartitionMode=Interactive&WindowsEditionMode=Generic&WindowsEdition=pro&UserAccountMode=Interactive&PasswordExpirationMode=Unlimited&LockoutMode=Default&HideFiles=Hidden&LaunchToThisPC=true&TaskbarSearch=Hide&TaskbarIconsMode=Empty&DisableWidgets=true&HideTaskViewButton=true&DisableBingResults=true&StartTilesMode=Empty&StartPinsMode=Empty&DisableUac=true&DisableSystemRestore=true&AllowPowerShellScripts=true&DisableLastAccess=true&DisableAppSuggestions=true&PreventDeviceEncryption=true&DisablePointerPrecision=true&DeleteWindowsOld=true&EffectsMode=Default&WifiMode=Interactive&ExpressSettings=DisableAll&KeysMode=Skip&ColorMode=Custom&SystemColorTheme=Dark&AppsColorTheme=Dark&AccentColor=%230078d4&EnableTransparency=true&WallpaperMode=Default&Remove3DViewer=true&RemoveBingSearch=true&RemoveClipchamp=true&RemoveCopilot=true&RemoveCortana=true&RemoveDevHome=true&RemoveFamily=true&RemoveFeedbackHub=true&RemoveGetHelp=true&RemoveHandwriting=true&RemoveInternetExplorer=true&RemoveMaps=true&RemoveMathInputPanel=true&RemoveMixedReality=true&RemoveZuneVideo=true&RemoveNews=true&RemoveOffice365=true&RemoveOneDrive=true&RemoveOneNote=true&RemoveOneSync=true&RemoveOpenSSHClient=true&RemoveOutlook=true&RemovePaint3D=true&RemovePeople=true&RemovePowerAutomate=true&RemovePowerShellISE=true&RemoveQuickAssist=true&RemoveRecall=true&RemoveRdpClient=true&RemoveSkype=true&RemoveSolitaire=true&RemoveSpeech=true&RemoveStepsRecorder=true&RemoveStickyNotes=true&RemoveTeams=true&RemoveGetStarted=true&RemoveToDo=true&RemoveVoiceRecorder=true&RemoveWallet=true&RemoveWeather=true&RemoveFaxAndScan=true&RemoveWindowsMediaPlayer=true&RemoveWordPad=true&RemoveYourPhone=true&SystemScript0=powercfg.exe+%2Fhibernate+off%0D%0A&SystemScriptType0=Cmd&SystemScript1=Windows+Registry+Editor+Version+5.00%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CSoftware%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CSerialize%5D%0D%0A%22StartupDelayInMSec%22%3Ddword%3A00000000%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CAdvanced%5D%0D%0A%22MultiTaskingAltTabFilter%22%3Ddword%3A00000003%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CControl+Panel%5CDesktop%5D%0D%0A%22PaintDesktopVersion%22%3Ddword%3A00000000%0D%0A%22JPEGImportQuality%22%3Ddword%3A00000099%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDesktopBackground%5CShell%5CKillNotResponding%5D%0D%0A%22MUIVerb%22%3D%22Kill+not+responding+tasks%22%0D%0A%22Icon%22%3D%22%25SystemRoot%25%5C%5C%5C%5CSystem32%5C%5C%5C%5Cimageres.dll%2C-98%22%0D%0A%22Position%22%3D%22Top%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDesktopBackground%5CShell%5CKillNotResponding%5CCommand%5D%0D%0A%40%3D%22cmd.exe+%2FK+taskkill.exe+%2FF+%2FFI+%5C%22status+eq+NOT+RESPONDING%5C%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5C*%5Cshell%5CTakeOwnership%5D%0D%0A%40%3D%22Take+Ownership%22%0D%0A%22HasLUAShield%22%3D%22%22%0D%0A%22NoWorkingDirectory%22%3D%22%22%0D%0A%22NeverDefault%22%3D%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5C*%5Cshell%5CTakeOwnership%5Ccommand%5D%0D%0A%40%3D%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%22IsolatedCommand%22%3D+%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDirectory%5Cshell%5CTakeOwnership%5D%0D%0A%40%3D%22Take+Ownership%22%0D%0A%22HasLUAShield%22%3D%22%22%0D%0A%22NoWorkingDirectory%22%3D%22%22%0D%0A%22NeverDefault%22%3D%22%22%0D%0A%0D%0A%5BHKEY_CLASSES_ROOT%5CDirectory%5Cshell%5CTakeOwnership%5Ccommand%5D%0D%0A%40%3D%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fr+%2Fd+y+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%2Fq+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%22IsolatedCommand%22%3D%22powershell+-windowstyle+hidden+-command+%5C%22Start-Process+cmd+-ArgumentList+%27%2Fc+takeown+%2Ff+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fr+%2Fd+y+%26%26+icacls+%5C%5C%5C%22%251%5C%5C%5C%22+%2Fgrant+*S-1-3-4%3AF+%2Ft+%2Fc+%2Fl+%2Fq+%26+pause%27+-Verb+runAs%5C%22%22%0D%0A%0D%0A%3B+Desktop%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7BB4BFCC3A-DB2C-424C-B029-7FE99A87C641%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7BB4BFCC3A-DB2C-424C-B029-7FE99A87C641%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Documents%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bd3162b92-9365-467a-956b-92703aca08af%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bd3162b92-9365-467a-956b-92703aca08af%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Downloads%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B088e3905-0323-4b02-9826-5d99428e115f%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B088e3905-0323-4b02-9826-5d99428e115f%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Music%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B3dfdf296-dbec-4fb4-81d1-6a3438bcf4de%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B1CF1260C-4DD0-4ebb-811F-33C572699FDE%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B3dfdf296-dbec-4fb4-81d1-6a3438bcf4de%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Pictures%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B24ad3ad4-a569-4530-98e1-ab02f9417aa8%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7B24ad3ad4-a569-4530-98e1-ab02f9417aa8%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%3B+Videos%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bf86fa3ab-70d2-4fc7-9c99-fcbf05467f3a%7D%5D%0D%0A%22HideIfEnabled%22%3D-%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CMyComputer%5CNameSpace%5C%7Bf86fa3ab-70d2-4fc7-9c99-fcbf05467f3a%7D%5D%0D%0A%22HiddenByDefault%22%3Ddword%3A00000000%0D%0A%0D%0A%5BHKEY_LOCAL_MACHINE%5CSYSTEM%5CCurrentControlSet%5CServices%5Cnvlddmkm%5CFTS%5D%0D%0A%22EnableGR535%22%3Ddword%3A00000000%0D%0A%0D%0A&SystemScriptType1=Reg&FirstLogonScript0=Windows+Registry+Editor+Version+5.00%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CAdvanced%5D%0D%0A%22MultiTaskingAltTabFilter%22%3Ddword%3A00000003%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CControl+Panel%5CDesktop%5D%0D%0A%22PaintDesktopVersion%22%3Ddword%3A00000000%0D%0A%22JPEGImportQuality%22%3Ddword%3A00000099%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CSOFTWARE%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CAdvanced%5D%0D%0A%22MultiTaskingAltTabFilter%22%3Ddword%3A00000003&FirstLogonScriptType0=Reg&FirstLogonScript3=Windows+Registry+Editor+Version+5.00%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CControl+Panel%5CDesktop%5D%0D%0A%22PaintDesktopVersion%22%3Ddword%3A00000000%0D%0A%0D%0A%5BHKEY_CURRENT_USER%5CSoftware%5CMicrosoft%5CWindows%5CCurrentVersion%5CExplorer%5CSerialize%5D%0D%0A%22StartupDelayInMSec%22%3Ddword%3A00000000%0D%0A&FirstLogonScriptType3=Reg&RestartExplorer=true&WdacMode=Skip-->
 	<settings pass="offlineServicing"></settings>
 	<settings pass="windowsPE">
 		<component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
@@ -32,62 +32,6 @@
 				<RunSynchronousCommand wcm:action="add">
 					<Order>3</Order>
 					<Path>reg.exe add "HKLM\SYSTEM\Setup\LabConfig" /v BypassRAMCheck /t REG_DWORD /d 1 /f</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>4</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo WScript.Echo "Scanning for newly created SYSTEM registry hive file to disable Windows Defender services..."&amp;echo Set fso = CreateObject("Scripting.FileSystemObject"^))"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>5</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo Set existing = CreateObject("Scripting.Dictionary"^)&amp;echo Function Execute(command^)&amp;echo WScript.Echo "Running command '" + command + "'"&amp;echo Set shell = CreateObject("WScript.Shell"^))"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>6</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo Set exec = shell.Exec(command^)&amp;echo Do While exec.Status = 0&amp;echo WScript.Sleep 100&amp;echo Loop&amp;echo WScript.Echo exec.StdOut.ReadAll&amp;echo WScript.Echo exec.StdErr.ReadAll)"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>7</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo Execute = exec.ExitCode&amp;echo End Function&amp;echo Function FindHiveFiles&amp;echo Set FindHiveFiles = CreateObject("Scripting.Dictionary"^)&amp;echo For Each drive In fso.Drives)"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>8</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo If drive.IsReady And drive.DriveLetter ^&lt;^&gt; "X" Then&amp;echo For Each folder In Array("$Windows.~BT\NewOS\Windows", "Windows"^))"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>9</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo file = fso.BuildPath(fso.BuildPath(drive.RootFolder, folder^), "System32\config\SYSTEM"^)&amp;echo If fso.FileExists(file^) And fso.FileExists(file + ".LOG1"^) And fso.FileExists(file + ".LOG2"^) Then)"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>10</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo FindHiveFiles.Add file, Nothing&amp;echo End If&amp;echo Next&amp;echo End If&amp;echo Next&amp;echo End Function&amp;echo For Each file In FindHiveFiles)"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>11</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo WScript.Echo "Will ignore file at '" + file + "' because it was already present when Windows Setup started."&amp;echo existing.Add file, Nothing&amp;echo Next&amp;echo Do)"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>12</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo For Each file In FindHiveFiles&amp;echo If Not existing.Exists(file^) Then&amp;echo ret = 1&amp;echo While ret ^&gt; 0&amp;echo WScript.Sleep 500&amp;echo ret = Execute("reg.exe LOAD HKLM\mount " + file^))"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>13</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo Wend&amp;echo For Each service In Array("Sense", "WdBoot", "WdFilter", "WdNisDrv", "WdNisSvc", "WinDefend"^))"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>14</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo ret = Execute("reg.exe ADD HKLM\mount\ControlSet001\Services\" + service + " /v Start /t REG_DWORD /d 4 /f"^)&amp;echo Next&amp;echo ret = Execute("reg.exe UNLOAD HKLM\mount"^))"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>15</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo WScript.Echo "Found and successfully modified SYSTEM registry hive file at '" + file + "'. This window will now close."&amp;echo WScript.Sleep 5000&amp;echo Exit Do&amp;echo End If)"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>16</Order>
-					<Path>cmd.exe /c "&gt;&gt;"X:\defender.vbs" (echo WScript.Sleep 1000&amp;echo Next&amp;echo Loop)"</Path>
-				</RunSynchronousCommand>
-				<RunSynchronousCommand wcm:action="add">
-					<Order>17</Order>
-					<Path>cmd.exe /c "start /MIN cscript.exe //E:vbscript X:\defender.vbs"</Path>
 				</RunSynchronousCommand>
 			</RunSynchronous>
 		</component>
@@ -235,13 +179,6 @@ $selectors = @(
 	'Microsoft.WindowsSoundRecorder';
 	'Microsoft.Wallet';
 	'Microsoft.BingWeather';
-	'Microsoft.Xbox.TCUI';
-	'Microsoft.XboxApp';
-	'Microsoft.XboxGameOverlay';
-	'Microsoft.XboxGamingOverlay';
-	'Microsoft.XboxIdentityProvider';
-	'Microsoft.XboxSpeechToTextOverlay';
-	'Microsoft.GamingApp';
 	'Microsoft.YourPhone';
 	'Microsoft.ZuneVideo';
 );
@@ -539,11 +476,14 @@ powercfg.exe /hibernate off
 		<File path="C:\Windows\Setup\Scripts\unattend-02.reg" transformation="Text">
 Windows Registry Editor Version 5.00
 
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize]
+"StartupDelayInMSec"=dword:00000000
+
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 "MultiTaskingAltTabFilter"=dword:00000003
 
 [HKEY_CURRENT_USER\Control Panel\Desktop]
-"PaintDesktopVersion"=dword:00000001
+"PaintDesktopVersion"=dword:00000000
 "JPEGImportQuality"=dword:00000099
 
 [HKEY_CLASSES_ROOT\DesktopBackground\Shell\KillNotResponding]
@@ -618,6 +558,9 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}]
 "HiddenByDefault"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\nvlddmkm\FTS]
+"EnableGR535"=dword:00000000
 		</File>
 		<File path="C:\Windows\Setup\Scripts\unattend-03.reg" transformation="Text">
 Windows Registry Editor Version 5.00
@@ -626,8 +569,20 @@ Windows Registry Editor Version 5.00
 "MultiTaskingAltTabFilter"=dword:00000003
 
 [HKEY_CURRENT_USER\Control Panel\Desktop]
-"PaintDesktopVersion"=dword:00000001
+"PaintDesktopVersion"=dword:00000000
 "JPEGImportQuality"=dword:00000099
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"MultiTaskingAltTabFilter"=dword:00000003
+		</File>
+		<File path="C:\Windows\Setup\Scripts\unattend-04.reg" transformation="Text">
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"PaintDesktopVersion"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize]
+"StartupDelayInMSec"=dword:00000000
 		</File>
 		<File path="C:\Windows\Setup\Scripts\Specialize.ps1" transformation="Text">
 $scripts = @(
@@ -823,6 +778,9 @@ $scripts = @(
 	};
 	{
 		reg.exe import "C:\Windows\Setup\Scripts\unattend-03.reg";
+	};
+	{
+		reg.exe import "C:\Windows\Setup\Scripts\unattend-04.reg";
 	};
 );
 
